@@ -53,6 +53,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.11.0)
     pdf-core (0.2.5)
+    powify (0.9.2)
     prawn (1.0.0)
       pdf-core (~> 0.2.2)
       ttfunk (~> 1.1.1)
@@ -116,6 +117,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  powify (~> 0.9.2)
   prawn
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
