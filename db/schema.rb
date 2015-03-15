@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315210614) do
+ActiveRecord::Schema.define(version: 20150315212017) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 20150315210614) do
 
   add_index "invoices", ["doctor_id"], name: "index_invoices_on_doctor_id"
   add_index "invoices", ["patient_id"], name: "index_invoices_on_patient_id"
+
+  create_table "line_items", force: true do |t|
+    t.string   "name"
+    t.integer  "quantity"
+    t.decimal  "unit_price"
+    t.integer  "invoice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "line_items", ["invoice_id"], name: "index_line_items_on_invoice_id"
 
   create_table "patients", force: true do |t|
     t.string   "name"
