@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :doctors, only: [:index, :show, :edit]
   resources :countries, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
