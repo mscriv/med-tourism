@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'line_items/new'
+  root 'welcome/index'
 
-  get 'line_items/edit'
-
-  get 'line_items/show'
-
+  resources :line_items, only: [:index, :new, :edit, :show]
   resources :patients, only: [:index, :new, :show, :edit]
   resources :doctors, only: [:index, :show, :edit]
   resources :countries, only: [:index, :show]
